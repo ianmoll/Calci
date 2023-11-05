@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+      font-family:'Roboto', sans-serif ;
+      font-size: 18px;
+
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+/* background: #f4f4f4; */
+}
+.container{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+    padding: 12px;
+    width: 256px;
+    text-align: center;
+    border: 10px solid #101116;
+    background: #161928;
+    border-radius: 1rem;
+    box-shadow: 0ppx 9px 15px -3px rgba(0,0,0,0.1);
+}
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+input[type= "text"]{
+     height: 75px;
+     width: 249px;
+     background-color: #10111600;
+     border-radius: 1rem;
+     color: #ffffff;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      /* text-indent: calc(100% - 96%); */
+    text-align: left;
+    direction: ltr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#clear{
+    grid-column: 1/3;
+    grid-row: 1;
+    color: #262834;
+}
+#result{
+    grid-column: 3/5;
+    grid-row: 5;
+    color: #262834;
+
+}
+#backspace{
+    color: #262834;
+}
+button{
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #262834;
+    color: #ffffff;
+    font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+button:hover{
+   border: 2px dotted #76767a;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.highlight{
+    background: #56cbdb ;
 }
